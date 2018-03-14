@@ -1,7 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c7094c6f-56b2-4cff-9e51-a24003316996" name="Default" comment="" />
+    <list default="true" id="c7094c6f-56b2-4cff-9e51-a24003316996" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/01_programming_python.iml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/attachgui.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/class-shelve.bak" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/class-shelve.dat" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/class-shelve.dir" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/dump_db_classes.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/dump_db_pickle.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/dump_db_shelve.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/initdata.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/make_db_classes.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/make_db_file.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/make_db_pickle.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/make_db_shelve.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/manager.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/people-file" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/people-pickle" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/people-shelve.bak" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/people-shelve.dat" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/people-shelve.dir" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/peoplegui.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/peopleinteract_query.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/person.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/person_start.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/tkinter001.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/tkinter103.py" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,6 +69,9 @@
       <replace>'</replace>
     </replaceStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -52,6 +84,7 @@
     <option name="width" value="984" />
     <option name="height" value="1028" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -147,7 +180,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32924107" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
