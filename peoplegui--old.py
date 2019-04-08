@@ -1,6 +1,17 @@
 """
-Implement a GUI for viewing and updating class instances stored in a shelve;
-the shelve lives on the machine this script runs on, as 1 or more local files;
+This is original peoplegui.py from the prior edition (with a few minor updates);
+because it used pack() + nested side frames, labels didn't align with entries 
+quite correctly on Windows 7, and may have been even further askew elsewhere;
+run this and persongui.py to see the difference--on Windows 7, the first and 
+last field labels are slightly too high and low, respectively; to do better, 
+this was changed to use grid() instead of pack(), and most form-like examples 
+in the book probably should as well; the PyMailGui example aleady was already
+so updated in a later release of the prior edition's example package.
+
+See also peoplegui--frame.py here for an alternative way to layout forms with
+pack() using nested row frames and fixed-width labels, that looks just as nice
+as grid(), and is roughly the same in terms of code size.  The version here,
+though, relies on font size and layout algorithms to align at all.
 """
 
 from tkinter import *
@@ -13,14 +24,17 @@ def makeWidgets():
     global entries
     window = Tk()
     window.title('People Shelve')
-    form = Frame(window)
+    form   = Frame(window)
+    labels = Frame(form)
+    values = Frame(form)
+    labels.pack(side=LEFT)
+    values.pack(side=RIGHT)
     form.pack()
     entries = {}
-    for (ix, label) in enumerate(('key',) + fieldnames):
-        lab = Label(form, text=label)
-        ent = Entry(form)
-        lab.grid(row=ix, column=0)
-        ent.grid(row=ix, column=1)
+    for label in ('key',) + fieldnames:
+        Label(labels, text=label).pack()
+        ent = Entry(values)
+        ent.pack()
         entries[label] = ent
     Button(window, text="Fetch",  command=fetchRecord).pack(side=LEFT)
     Button(window, text="Update", command=updateRecord).pack(side=LEFT)

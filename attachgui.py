@@ -1,10 +1,12 @@
-from tkinter import mainloop
-from tkinter.messagebox import showinfo
-from tkinter001 import MyGui
+from tkinter import *
+from tkinter102 import MyGui
 
-class CustomGui(MyGui): # наследует метод __init__
-    def reply(self): # замещает метод reply
-        showinfo(title='popup', message='Ouch!')
-if __name__ == '__main__':
-    CustomGui().pack()
-    mainloop()
+# main app window
+mainwin = Tk()
+Label(mainwin, text=__name__).pack()
+
+# popup window
+popup = Toplevel()
+Label(popup, text='Attach').pack(side=LEFT)
+MyGui(popup).pack(side=RIGHT)                   # attach my frame
+mainwin.mainloop()

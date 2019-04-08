@@ -1,6 +1,8 @@
 """
-Implement a GUI for viewing and updating class instances stored in a shelve;
-the shelve lives on the machine this script runs on, as 1 or more local files;
+See peoplegui--old.py: the alternative here uses nedted row frames with fixed
+widdth labels with pack() to acheive the same aligned layout as grid(), but it
+takes two extra lines of code as is (though adding window resize support makes
+the two techniques roughly the same--see later in the book).
 """
 
 from tkinter import *
@@ -13,14 +15,16 @@ def makeWidgets():
     global entries
     window = Tk()
     window.title('People Shelve')
-    form = Frame(window)
+    form   = Frame(window)
     form.pack()
     entries = {}
-    for (ix, label) in enumerate(('key',) + fieldnames):
-        lab = Label(form, text=label)
-        ent = Entry(form)
-        lab.grid(row=ix, column=0)
-        ent.grid(row=ix, column=1)
+    for label in ('key',) + fieldnames:
+        row = Frame(form)
+        lab = Label(row, text=label, width=6)
+        ent = Entry(row)
+        row.pack(side=TOP)
+        lab.pack(side=LEFT)
+        ent.pack(side=RIGHT)
         entries[label] = ent
     Button(window, text="Fetch",  command=fetchRecord).pack(side=LEFT)
     Button(window, text="Update", command=updateRecord).pack(side=LEFT)

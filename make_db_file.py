@@ -1,43 +1,29 @@
-# -*- coding: utf-8 -*-
 """
-Created on Tue Mar 13 15:16:18 2018
-
-@author: Oleg.Shcherbinin
-"""
-
-"""
-Сохраняет в файл базу данных, находящуюся в оперативной памяти, используя
-собственный формат записи; предполагается, что в данных отсутствуют строки
-"endrec.", "enddb." и "=>"; предполагается, что база данных является словарем
-словарей; внимание: применение функции eval может быть опасным – она
-выполняет строки как программный код; с помощью функции eval() можно также
-реализовать сохранение словарей-записей целиком; кроме того, вместо вызова
-print(key,file=dbfile) можно использовать вызов dbfile.write(key + "\n");
+Save in-memory database object to a file with custom formatting;
+assume 'endrec.', 'enddb.', and '=>' are not used in the data;
+assume db is dict of dict;  warning: eval can be dangerous - it
+runs strings as code;  could also eval() record dict all at once;
+could also dbfile.write(key + '\n') vs print(key, file=dbfile);
 """
 
-
-dbfilename = "people-file"
-ENDDB = "enddb."
-ENDREC = "endrec."
-RECSEP = "=>"
-
+dbfilename = 'people-file'
+ENDDB  = 'enddb.'
+ENDREC = 'endrec.'
+RECSEP = '=>'
 
 def storeDbase(db, dbfilename=dbfilename):
-    
-    "сохраняет базу данных в файл"
-    dbfile = open(dbfilename, "w")
+    "formatted dump of database to flat file"
+    dbfile = open(dbfilename, 'w')
     for key in db:
-        print(key, file=dbfile)
+        print(key, file=dbfile)                               
         for (name, value) in db[key].items():
             print(name + RECSEP + repr(value), file=dbfile)
         print(ENDREC, file=dbfile)
     print(ENDDB, file=dbfile)
     dbfile.close()
-    
-    
+
 def loadDbase(dbfilename=dbfilename):
-    
-    "восстанавливает данные, реконструируя базу данных"
+    "parse data to reconstruct database"
     dbfile = open(dbfilename)
     import sys
     sys.stdin = dbfile
@@ -50,11 +36,10 @@ def loadDbase(dbfilename=dbfilename):
             name, value = field.split(RECSEP)
             rec[name] = eval(value)
             field = input()
-    db[key] = rec
-    key = input()
+        db[key] = rec
+        key = input()
     return db
 
-
-if __name__ == "__main__":
+if __name__ == '__main__':
     from initdata import db
     storeDbase(db)
